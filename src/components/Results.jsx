@@ -3,22 +3,10 @@ import { useLocation } from "react-router-dom";
 import ReactPlayer from "react-player";
 import Loading from "./Loading";
 
-import { useResultContext } from "../contexts/ResultContextProvider";
+// import { useResultContext } from "../contexts/ResultContextProvider";
 
 const Results = () => {
-  const { getResults, results, searchTerm, setSearchTerm, isLoading } = useResultContext();
-  const location = useLocation();
-
-  if (isLoading) {
-    return <Loading />;
-  }
-  switch (location.pathname) {
-    case "/search":
-      return "Search";
-
-    default:
-      return "Error";
-  }
+  return <div>result</div>;
 };
 
 export default Results;

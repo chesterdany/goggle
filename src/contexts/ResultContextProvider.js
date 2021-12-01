@@ -23,7 +23,7 @@ export const ResultContextProvider = ({ children }) => {
     const data = await response.data;
     setResults(data);
     setIsLoading(false);
-    console.log(data);
+    console.log(response);
   };
 
   return (

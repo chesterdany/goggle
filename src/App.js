@@ -2,8 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Routes, Route, Navigate } from "react-router-dom";
-import Results from "./components/Results";
+import Pages from "./components/Pages";
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -12,15 +11,7 @@ function App() {
     <div className={darkTheme ? "dark" : ""}>
       <div className="bg-gray-100 dark:bg-gray-900 dark:text-gray-200 min-h-screen">
         <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
-        <div className="p-4">
-          <Navigate from="/" to="/search"></Navigate>
-          <Routes>
-            <Route path="/search" element={<Results />} />
-            <Route path="/images" element={<Results />} />
-            <Route path="/news" element={<Results />} />
-            <Route path="/videos" element={<Results />} />
-          </Routes>
-        </div>
+        <Pages />
         <Footer />
       </div>
     </div>
