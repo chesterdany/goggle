@@ -20,7 +20,15 @@ export const ResultContextProvider = ({ children }) => {
         "x-rapidapi-key": process.env.REACT_APP_API_KEY,
       },
     });
-    setResults(response.data);
+
+    if (type.includes("/news")) {
+      setResults(response.data.entries);
+    } else if (type.includes("/images")) {
+      setResults(response.data.image_results);
+    } else {
+      setResults(response.data.results);
+    }
+
     setIsLoading(false);
   };
 
