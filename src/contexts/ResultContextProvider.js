@@ -20,9 +20,9 @@ export const ResultContextProvider = ({ children }) => {
         "x-rapidapi-key": "342fed366bmsh71946c23c7129b0p180c7fjsn0f48379781cd",
       },
     });
-    const data = await response.data;
-    setResults(data);
-    setIsLoading(false);
+    // const data = await response.data;
+    // setResults(data);
+    // setIsLoading(false);
     console.log(response);
   };
 

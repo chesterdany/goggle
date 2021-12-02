@@ -1,12 +1,19 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ReactPlayer from "react-player";
 import Loading from "./Loading";
 
-// import { useResultContext } from "../contexts/ResultContextProvider";
+import { useResultContext } from "../contexts/ResultContextProvider";
 
 const Results = () => {
-  return <div>result</div>;
+  let navigate = useNavigate();
+  const { getResults, results, searchTerm, isLoading } = useResultContext();
+
+  if (isLoading) {
+    <Loading />;
+  }
+
+  console.log(navigate);
 };
 
 export default Results;
