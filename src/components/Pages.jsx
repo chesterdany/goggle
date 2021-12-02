@@ -7,8 +7,9 @@ const Pages = () => {
       <Routes>
         <Route path="/search" element={<Results />}></Route>
         <Route path="/" element={<Navigate replace to="/search" />}></Route>
-
-        {/* 1-complete all the routes, 2-implement useContext */}
+        <Route path="/images" element={<Results />}></Route>
+        <Route path="/videos" element={<Results />}></Route>
+        <Route path="/news" element={<Results />}></Route>
       </Routes>
     </div>
   );
