@@ -7,17 +7,17 @@ const baseUrl = process.env.REACT_APP_BASE_URL;
 export const ResultContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("Js Mastery");
 
   const getResults = async (type) => {
     setIsLoading(true);
-    console.log(baseUrl);
+
     const response = await axios.get(`${baseUrl}${type}`, {
       headers: {
         "x-user-agent": "desktop",
         "x-proxy-location": "US",
-        "x-rapidapi-host": "google-search3.p.rapidapi.com",
-        "x-rapidapi-key": "342fed366bmsh71946c23c7129b0p180c7fjsn0f48379781cd",
+        "x-rapidapi-host": process.env.REACT_APP_HOST,
+        "x-rapidapi-key": process.env.REACT_APP_API_KEY,
       },
     });
     setResults(response.data);

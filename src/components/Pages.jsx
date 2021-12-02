@@ -8,7 +8,6 @@ const Pages = () => {
         <Route path="search" element={<Results />}></Route>
         <Route path="/" element={<Navigate replace to="/search" />}></Route>
         <Route path="images" element={<Results />}></Route>
-        <Route path="videos" element={<Results />}></Route>
         <Route path="news" element={<Results />}></Route>
       </Routes>
     </div>
