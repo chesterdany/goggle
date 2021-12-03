@@ -69,7 +69,7 @@ const Results = () => {
       );
 
     default:
-      return "Error";
+      return "";
   }
 };
 
