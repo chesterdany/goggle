@@ -10,6 +10,8 @@ export const ResultContextProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("Js Mastery");
 
   const getResults = async (type) => {
+    setResults([]);
+    console.log(results);
     setIsLoading(true);
 
     const response = await axios.get(`${baseUrl}${type}`, {

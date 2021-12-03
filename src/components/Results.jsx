@@ -16,7 +16,6 @@ const Results = () => {
 
   if (isLoading) return <Loading />;
 
-  console.log(location.pathname);
   console.log(results);
 
   switch (location.pathname) {
